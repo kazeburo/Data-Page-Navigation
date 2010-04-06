@@ -2,6 +2,7 @@ Revision history for Perl extension Data::Page::Navigation.
 
 0.04 Mon Apr 5 22:51:00 2010
     - rebuild with Module::Setup and pushed to github
+    - no functional changes
 
 0.03 Tue Mar 14 12:51:53 2005
         - added (first|last)_navigation_page methods, Thanks to Aran.
