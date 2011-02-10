@@ -1,4 +1,4 @@
-use Test::More tests => 16;
+use Test::More tests => 17;
 use Data::Page::Navigation;
 
 #first
@@ -19,6 +19,8 @@ use Data::Page::Navigation;
     
     is($pager->pages_per_navigation,$pages_per_navigation,"first: object method: pages_per_navigation");
     is_deeply([$pager->pages_in_navigation],[qw/1 2 3 4 5/],"first: pages_in_navigation p2");
+    
+    is_deeply(scalar $pager->pages_in_navigation, [qw/1 2 3 4 5/],"scalar context");
     
     #first/last_naviagtion_page
     is($pager->first_navigation_page,1,"first: first_navigation_page p2");
