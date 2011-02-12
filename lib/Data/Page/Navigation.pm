@@ -3,14 +3,14 @@ use strict;
 use warnings;
 use Data::Page;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 package 
   Data::Page;
 
 __PACKAGE__->mk_accessors(qw/pages_per_navigation/);
 
-sub pages_in_navigation(){
+sub pages_in_navigation {
     my $self = shift;
 
     my $last_page = $self->last_page;

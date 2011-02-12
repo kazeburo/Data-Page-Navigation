@@ -1,5 +1,8 @@
 Revision history for Perl extension Data::Page::Navigation.
 
+0.05 Sat Feb 12 23:54:28 2011
+    - pages_in_navigation() returns ArrayRef in scalar context. (tomi-ru)
+
 0.04 Mon Apr 5 22:51:00 2010
     - rebuild with Module::Setup and pushed to github
     - no functional changes
