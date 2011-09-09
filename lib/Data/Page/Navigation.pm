@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Data::Page;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 package 
   Data::Page;
