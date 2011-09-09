@@ -1,4 +1,4 @@
-use Test::More tests => 17;
+use Test::More tests => 19;
 use Data::Page::Navigation;
 
 #first
@@ -63,3 +63,17 @@ use Data::Page::Navigation;
     is($pager->last_navigation_page,14,"second: last_navigation_page p9");
 }
 
+{
+    my $total_entries=90;
+    my $entries_per_page = 10;
+    my $pages_per_navigation = 10;
+
+    my $pager = Data::Page->new(
+        $total_entries,
+        $entries_per_page,
+        1
+    );
+    $pager->pages_per_navigation($pages_per_navigation);
+    is_deeply([$pager->pages_in_navigation],[qw/1 2 3 4 5 6 7 8 9/],"third: pages_in_navigation");    
+    is_deeply(scalar $pager->pages_in_navigation, [qw/1 2 3 4 5 6 7 8 9/],"scalar context");
+}
