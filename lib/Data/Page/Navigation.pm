@@ -55,12 +55,12 @@ __END__
 
 =head1 NAME
 
-Data::Page::Navigation - adds methods for page navigation link to Data::Page
+Data::Page::Navigation - modifies Data::Page to generate page navigation links
 
 =head1 SYNOPSIS
 
     use Data::Page::Navigation;
-    my $total_entries=180;
+    my $total_entries = 180;
     my $entries_per_page = 10;
     my $pages_per_navigation = 10;
     my $current_page = 1;
@@ -80,20 +80,35 @@ Data::Page::Navigation - adds methods for page navigation link to Data::Page
 
 =head1 DESCRIPTION
 
-Using this module instead of, or in addition to Data::Page, adds a few methods to Data::Page.
+Using this module instead of, or in addition to L<Data::Page>, adds a few methods to Data::Page.
 
-This modules allow you to get the array where page numbers of the number that you set are included.
-The array is made so that a current page may come to the center as much as possible in the array. 
+The page navigation bar usually consists of several links that point
+to the pages "around" the current page. For example, if you have 18
+pages and currently displayed page is 7th, you will usually want to
+display something like:
+
+    1 .. 5 6 _7_ 8 9 .. 18
+
+The maths to calculate the page numbers contains a lot of corner cases
+and is prone to implementation errors. Fortunately, most of it is
+encapsulated in Data::Page.
+
+This module allows you to generate the list of specified length
+consisting of page numbers around the current page so that the current
+page is as close to the center of it as possible.
 
 =head1 METHODS
 
 =head2 pages_per_navigation
 
-Setting the number of page numbers displayed on one page. default is 10
+This method sets or gets the total count of page numbers displayed in
+the navigation. Default is 10.
 
 =head2 pages_in_navigation([pages_per_navigation])
 
-This method returns an array (or array-ref in scalar context) where page numbers of the number that you set with pages_per_navigation are included.
+This method returns the array (or array-ref in scalar context) of
+L</pages_per_navigation> elements. Each element is a page number close
+to the current page number.
 
 =head2 first_navigation_page
 
