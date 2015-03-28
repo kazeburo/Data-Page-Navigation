@@ -1,4 +1,6 @@
 use inc::Module::Install;
+use Module::Install::AuthorTests;
+use Module::Install::Repository;
 name 'Data-Page-Navigation';
 all_from 'lib/Data/Page/Navigation.pm';
 
