@@ -3,6 +3,8 @@ use strict;
 use warnings;
 use Data::Page;
 
+use 5.006;
+
 our $VERSION = '0.06';
 
 package 
