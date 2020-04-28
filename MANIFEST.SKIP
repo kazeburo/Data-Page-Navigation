@@ -20,4 +20,6 @@
 ^\.git/
 \.sw[po]$
 ^\.gitignore$
-
+^Data-Page-Navigation-
+^MYMETA.json
+^MYMETA.yml
