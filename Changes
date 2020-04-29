@@ -1,7 +1,10 @@
 Revision history for Perl extension Data::Page::Navigation.
 
+{{$NEXT}}
+
 0.07 Tue Apr 9 15:30:00 2020
-    - use ExtUtils::MakeMaker instead of Module::Install
+    - use Module::Build::Tiny instead of Module::Install
+    - Module authoring tool become Minilla
 
 0.06 Fri Sep 9 15:21:13 2011
     - pages_in_navigation() also returns ArrayRef in scalar context 
