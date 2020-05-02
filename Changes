@@ -2,6 +2,8 @@ Revision history for Perl extension Data::Page::Navigation.
 
 {{$NEXT}}
 
+0.07 2020-05-02T15:21:28Z
+
     - use Module::Build::Tiny instead of Module::Install
     - Module authoring tool become Minilla (Thank you yuki-kimoto)
 
