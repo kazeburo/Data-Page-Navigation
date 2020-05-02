@@ -10,3 +10,11 @@ nytprof.out
 MANIFEST.bak
 *.sw[po]
 *~
+/Data-Page-Navigation-*
+/.build
+/_build_params
+/Build
+/Build.bat
+!Build/
+!META.json
+!LICENSE
